@@ -1,1 +1,5 @@
 kaggle_dataset/
+venv/
+.env/
+.venv/
+env/
