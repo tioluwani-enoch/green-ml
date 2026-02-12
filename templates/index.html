@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🗑️ Waste Classifier</h1>
+        <p class="subtitle">Point your camera at waste items to classify them</p>
+        
+        <div class="instructions">
+            <strong>📱 How to use:</strong>
+            1. Allow camera access when prompted<br>
+            2. Point camera at a waste item<br>
+            3. Click "Classify Item" to get prediction
+        </div>
+        
+        <video id="video" autoplay playsinline></video>
+        <canvas id="canvas"></canvas>
+        
+        <div class="controls">
+            <button id="captureBtn">📸 Classify Item</button>
+        </div>
+        
+        <div class="loading">
+            <div class="spinner"></div>
+            <p>Analyzing image...</p>
+        </div>
+        
+        <div class="error">
+            <p id="errorMessage"></p>
+        </div>
+        
+        <div class="result">
+            <div class="prediction">
+                <div class="category" id="category"></div>
+                <div class="confidence" id="confidence"></div>
+            </div>
+            
+            <div class="bars" id="bars"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
