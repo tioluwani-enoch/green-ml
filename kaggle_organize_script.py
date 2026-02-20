@@ -5,15 +5,15 @@ from pathlib import Path
 import random
 
 # Where your dataset folders are (the folder containing battery, biological, etc.)
-DATASET_PATH = "kaggle_dataset/garbage_classification"  # UPDATE THIS!
+DATASET_PATH = "kaggle_dataset/entrainement"  # UPDATE THIS!
 
 # Your project data folder
 PROJECT_DATA = "data"
 
 # Mapping dataset categories to your 3 categories
 CATEGORY_MAP = {
-    'compost': ['biological'],  # ✓ This is your organic waste!
-    'recycle': ['cardboard', 'paper', 'plastic', 'metal', 'brown-glass', 'green-glass', 'white-glass'],
+    'compost': ['biological', 'compost'],  # ✓ This is your organic waste!
+    'recycle': ['cardboard', 'paper', 'plastic', 'metal', 'brown-glass', 'green-glass', 'white-glass', 'carton', 'glass'],
     'landfill': ['trash', 'battery', 'clothes', 'shoes']
 }
 
